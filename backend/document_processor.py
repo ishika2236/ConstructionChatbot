@@ -14,10 +14,10 @@ class DocumentProcessor:
     """Handles document ingestion, chunking, and indexing"""
     
     def __init__(self):
-        # Use local Hugging Face embeddings (no API key needed)
-        # This uses the sentence-transformers library already in requirements
+        # Use smaller local HuggingFace model (paraphrase-MiniLM-L3-v2 ~60MB vs all-MiniLM-L6-v2 ~400MB)
+        # This reduces memory usage to fit within Render's 512MB limit
         self.embeddings = HuggingFaceEmbeddings(
-            model_name="all-MiniLM-L6-v2",  # Fast and effective model
+            model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",  # Smaller, faster model
             model_kwargs={'device': 'cpu'},
             encode_kwargs={'normalize_embeddings': True}
         )

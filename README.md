@@ -192,9 +192,11 @@ This will:
 - **Metadata**: Each chunk includes source file, page number, and content type
 
 ### Retrieval Pipeline
-- **Vector Search**: OpenAI `text-embedding-ada-002` embeddings with ChromaDB
+- **Vector Search**: HuggingFace `paraphrase-MiniLM-L3-v2` embeddings with ChromaDB
+- **Model Choice**: Optimized for Render's 512MB free tier (~60MB vs 400MB for larger models)
 - **Top-k**: Retrieve 5 most relevant chunks by default
 - **Reranking**: Future enhancement - could add cross-encoder reranking
+- **Production Note**: Would use `all-MiniLM-L6-v2` or Azure OpenAI embeddings with more memory
 
 ### Structured Extraction
 - **Approach**: LLM-based extraction with JSON schema validation
@@ -260,10 +262,10 @@ This will:
 
 ### Backend
 - **Framework**: FastAPI 0.109
-- **LLM**: OpenAI GPT-4 Turbo
-- **Embeddings**: OpenAI text-embedding-ada-002
+- **LLM**: Azure OpenAI GPT-4o
+- **Embeddings**: HuggingFace paraphrase-MiniLM-L3-v2 (optimized for 512MB memory limit)
 - **Vector DB**: ChromaDB 0.4.22
-- **RAG Framework**: LangChain 0.1.4
+- **RAG Framework**: LangChain 0.3.0
 
 ### Frontend
 - **Framework**: Next.js 14 (App Router)

@@ -11,7 +11,10 @@ class Settings(BaseSettings):
     azure_openai_deployment: str  # Chat/LLM deployment name (e.g., gpt-4o)
     azure_openai_api_version: str = "2024-02-15-preview"
     
-    # Note: Using local HuggingFace embeddings (no API key needed)
+    # Note: Using smaller local HuggingFace embeddings (paraphrase-MiniLM-L3-v2) to reduce memory
+    
+    # Server Configuration
+    port: int = 8000  # Default port, can be overridden by environment
     
     # Document Processing Configuration
     chroma_persist_dir: str = "./chroma_db"
