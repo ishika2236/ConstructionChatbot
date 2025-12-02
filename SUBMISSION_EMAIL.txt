@@ -1,0 +1,27 @@
+Subject: Constructure AI - Technical Assignment Submission
+
+Hi,
+
+I have completed the Applied LLM Engineer technical assignment. The project is a RAG-powered construction document Q&A application with source citations and structured data extraction.
+
+GitHub Repository: https://github.com/ishika2236/ConstructionChatbot
+Frontend (Vercel): [Add your Vercel frontend URL]
+Backend: Running locally with ngrok tunnel (see note below)
+
+The repository includes complete setup instructions, evaluation scripts, and comprehensive documentation in ASSIGNMENT_SUBMISSION.md.
+
+Note on Deployment: Due to memory constraints on free hosting tiers (512MB limit vs ~400MB required), the backend is demonstrated via local deployment with ngrok public tunnel. The frontend is fully deployed on Vercel. For production, this would be hosted on Railway/Render paid tier or Azure App Service.
+
+Login credentials for testing: testingcheckuser1234@gmail.com
+
+Key Features:
+- RAG-powered Q&A with Azure OpenAI GPT-4o
+- Structured data extraction (door schedules, room summaries)
+- Vector search with optimized embeddings
+- Modern Next.js frontend with responsive design
+- Comprehensive evaluation framework
+
+Best regards,
+[Your Name]
+[Your Email]
+[Your Phone]
